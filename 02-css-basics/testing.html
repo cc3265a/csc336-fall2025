@@ -6,7 +6,7 @@
         <style>
             /* hover effect needed */
             * {
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-family: sans-serif;
             }
             body{
                 background-image: url('../bg-aurora.png');
@@ -14,8 +14,26 @@
 
             }
             p{
-                margin: 20px;
+                margin-left: 20px;
+                margin-right:20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
                 color: white;
+                line-height: 1.5;
+            }
+            img{
+                max-width: 90%;
+                border-radius: 50px;
+                transition: transform 200ms;
+                filter: drop-shadow(0 0 0.75rem rgb(194, 194, 194));
+                margin-bottom: 10px;
+            }
+            img:hover{
+                transform: scale(0.98);
+                box-shadow: 0 0 20px rgb(255, 255, 255);
+            }
+            p::first-letter{
+                font-size: 1.2em;
             }
             .grid {
                 margin: 10px;
@@ -50,6 +68,15 @@
             h2{
                 display: inline-block;
             }
+            .footnote{
+                font-size: smaller;
+                margin-left: 20px;
+                margin-right:20px;
+            }
+            .footnote::first-letter{
+                font-size: 1em;
+            }
+
             #Kendal{
                 color: aqua;
                 border: 5px solid aqua;
@@ -74,21 +101,29 @@
                 color:gold;
                 border: 5px solid gold;
             }
+            #none{
+                color:white;
+                border: 5px solid white;
+            }
         </style>
         <div>
-            <h1 class="header">Shrine To Aurora Comic by OSP Red</h1>
+            <h1 class="header" style="color:red ;">Shrine To Aurora Comic by OSP Red</h1>
             <nav class="grid">
                 <h2 class="header">Plot</h2>
-                    <p>The comic opens with a city under siege praying to their god for help. Their god Vash appears but is unprepared for the strange magic of The Collector. The Collector destroys the entire city in one move, and captures the now weakened soul of Vash, leaving his body with terrible wounds. Then the body wakes up. It is not Vash, but it has his memories, and it wants Vash back. The Collector seals a fisure in the rock behind her. The-person-who-is-not-Vash-and-not-yet-a-person tries to open the rock with a sword. This is bad for his health as he is also still bleeding out. </p>
-                    <p>Okay new plan find an entrance to the cave system. Surely this quest will not become a massive odyssey that collects new friends. </p>
+                    <nav class="characterSheet" id="none">
+                        <p>The comic opens with a city under siege praying to their god for help. Their god Vash appears but is unprepared for the strange magic of The Collector. The Collector destroys the entire city in one move, and captures the now weakened soul of Vash, leaving his body with terrible wounds. Then the body wakes up. It is not Vash, but it has his memories, and it wants Vash back. The Collector seals a fisure in the rock behind her. The-person-who-is-not-Vash-and-not-yet-a-person tries to open the rock with a sword. This is bad for his health as he is also still bleeding out. </p>
+                        <p>Okay new plan find an entrance to the cave system. Surely this quest will not become a massive odyssey that collects new friends. </p>
+                    </nav>
             </nav>
             <nav class="grid">
                 <h2 class="header">Main Characters</h2>
                 <nav class="characterSheet" id="Kendal">
                     <h3>Kendal</h3>
                     <p>I adore Kendal. He is the main character but don't let that fool you into thinking he's boring. When Vash's body wakes up he doesn't imagine himself as a person, merely a body with enough agency to want Vash's soul back. When he is prompted to come up with a name he sees no point. When pressed, he finally choses the name Kendal* which is the name of Vash's sword. He names himself after a weapon! Because he only sees himself as a tool of Vash and not a person!! </p>
-                    <p>*Kendal, more commonly spelled as Kendall, is a pretty normal name. Unfortunatly, Red has been planning this comic since she was in middle school and didn't know it was a real name. By the time she learned it wasn't simply a fantasy name it was too late and she was attatched. So Kendal he remains.</p>
+                    
                     <p>Kendal is more than just a sad boy who doesn't think he's a person. He cares extremely deeply about everyone around him. The people he meets often interpret this is naivety, and try to take advantage of him, but his optimism is something he fights for. He may be a week old, but he has the memories of a god, and everything that entails. Kendal choses to see the best in people, and assume good intentions, and that doesn't make him stupid. Indeed, his giving nature and self-sacraficial attitude might cause a lot of problems, but its also how everyone has joined his party. He would have died ten times over without the friends he made from being kind.</p>
+                    
+                    <p class="footnote">*Kendal, more commonly spelled as Kendall, is a pretty normal name. Unfortunatly, Red has been planning this comic since she was in middle school and didn't know it was a real name. By the time she learned it wasn't simply a fantasy name it was too late and she was attatched. So Kendal he remains.</p>
                 </nav>
                 <nav class="characterSheet" id="Alinua">
                     <h3>Alinua</h3>
@@ -99,7 +134,8 @@
                     <h1>Erin</h1>
                     <p>Erin is the next to join the party. He is the Elemental Magus, the only living person who can control all 6* elements. However, he could just as correctly be called the Hubris Wizard. This guy is almost always the most powerful person in the room and he knows it. Born and raised in acedemia, he has connections in high places that deeply want to be on his good side. Self-assured, and usually correct to be, Erin can have a hard time accepting failure. However, he must accept help now that he is possessed by The Void Dragon.</p>
                     <p>In his hubris Erin ventured into a deadly eternal storm and found the damaged ancient artifact at it's source. In doing so he become the vessel of the Void Dragon, an ancient primordeal the other six died to capture. Voidy wants out of his prison desperetly, tragically that prison is the entire planet, so our heroes are very motivated to stop him. Erin is now trying to play mind games with the dragon while the dragon does the same, and it's never quite clear who is winning. Erin is cocky and self-conscious, a complete glass cannon, and trying his best.</p>
-                    <p>*Water, Wind, Stone, Fire, Lightning, and Life</p>
+                    <p class="footnote">*Water, Wind, Stone, Fire, Lightning, and Life</p>
+                    <!-- Maybe link to a new page about world building -->
                 </nav>
                 <nav class="characterSheet" id="Falst">
                     <h1>Falst</h1>
@@ -115,6 +151,17 @@
                     <h1>Tess Ruunaser</h1>
                     <p>Hey what about someone who isn't tragic! Tess is a badass metal caste lighting mage who's main activity before joining the party was <i>punching dragons</i>. She is unaffected when being chased around Zuurith by the city guards and equally unfazed when her brother tells her he is possessed by The Bad Guy Of All Time. She's simply too cool to have a sad backstory, right? Well she certainly thinks so. When she recounts her tale, the party is aghast but she just shrugs it off and talks about her adventures. Erin feels <i>immensly guilty</i> for the conditions of her early life, and she tells him to stop acting like everything is always on his shoulders alone, he was a kid for goodness sake. Tess is great.</p>
                 </nav>
+                <h2 class="header">Plot</h2>
+                    <div style="text-align: center;">
+
+                        <a href="https://comicaurora.com/aurora/1-13-13/"><img src="../Weapon.png" alt= "Kendal and Dainix chat in prison. Dainix asks if Kendal is a god and kendal responds that he is a weapon" title= "Kendal and Dainix chat in prison" class="image"></a>
+                        
+                        <p class="footnote">Kendal (left) and Dainix (right) have just met in Dainix's prison cell. Dainix is trying to figure out what is so scary about Kendal that the prison warden broke his own rules to keep Kendal contained.</p>
+                        <br>
+                        <a href="https://comicaurora.com/aurora/1-15-24/"> <img src="../Arena.png" width="800" alt= "Kendal faces an arena of cheering spectators while the announcer calls him a living weapon, a monument to the people of Vash" title= "Kendal is faced with the arena"> </a>
+                        
+                        <p class="footnote">Kendal has been told Dainix is being released and led from the prison cell. He is then thrust into an arena and told he must fight Dainix with no warning. To add insult to injury the announcer mentions the entire city that died when he was made, which he feels responsible for, <i>and</i> undermines Dainix and Alinua's insistance that Kendal is a person.</p>
+                    </div>
             </nav>
         </div>
     </body>
