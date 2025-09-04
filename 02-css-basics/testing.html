@@ -1,12 +1,18 @@
 <html>
     <head>
         <title>Aurora Shrine</title>
+         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/opendyslexic" type="text/css"/> 
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
     </head>
     <body>
         <style>
             /* hover effect needed */
             * {
-                font-family: sans-serif;
+                font-family: 'OpenDyslexic3Regular';
+                font-weight: normal;
+                font-style: normal; 
             }
             body{
                 background-image: url('../bg-aurora.png');
@@ -35,10 +41,18 @@
             p::first-letter{
                 font-size: 1.2em;
             }
+            .myHeader{
+                font-family: "Sigmar One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                color:white;
+                padding-left: 20px;
+                font-size: xx-large;
+            }
             .grid {
                 margin: 10px;
-                margin-left: 90px;
-                margin-right: 90px;
+                margin-left: 20%;
+                margin-right: 20%;
                 display: grid;
                 justify-content: space-around;
                 background-color: rgba(0, 0, 0, 0.5);        
@@ -107,7 +121,7 @@
             }
         </style>
         <div>
-            <h1 class="header" style="color:red; text-align: center;">Shrine To Aurora Comic by OSP Red</h1>
+            <h1 class="myHeader" style="color:red; text-align: center;">Shrine To Aurora Comic by OSP Red</h1>
             <nav class="grid">
                 <h2 class="header">Plot</h2>
                     <nav class="characterSheet" id="none">
