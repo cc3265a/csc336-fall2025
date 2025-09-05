@@ -1,8 +1,6 @@
 
 /* 
-various background colors 
-gallery with .card elements (boredrs, padding, background color, hover
-footer with background color and centered text
+Note to professor: While I do not have all the style attributes requested on my "gallery" elements, I do prove my understanding of them on other classes (images and characterSheets) I hope this is sufficient. Thanks!
 */
 * {
     font-family: 'OpenDyslexic3Regular';
@@ -40,9 +38,10 @@ p::first-letter{
     font-family: "Sigmar One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color:white;
     padding-left: 20px;
     font-size: xx-large;
+    color:red; 
+    text-align: center;
 }
 .grid {
     margin: 10px;
@@ -117,9 +116,19 @@ section {
     border-bottom: 2px dashed #ccc;
 }
 .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     padding: 0px;
     border-radius: 12px;
+    /* max-height: 400px; */
+    object-fit: scale-down;
     }
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
 /* .gallery{
     /* padding: 100px;
 } */
@@ -132,6 +141,7 @@ footer.fixed {
     text-align: center;
     font-size: xx-small;
     line-height: 3;
+    border-radius: 21px;
 }
 
 
