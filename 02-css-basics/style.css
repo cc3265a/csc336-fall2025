@@ -1,6 +1,6 @@
 
-/* various background colors 
-header with background, flexbox links, hover effect
+/* 
+various background colors 
 gallery with .card elements (boredrs, padding, background color, hover
 footer with background color and centered text
 */
@@ -12,7 +12,6 @@ footer with background color and centered text
 body{
     background-image: url('../bg-aurora.png');
     background-size: cover;
-
 }
 p{
     margin-left: 20px;
@@ -24,7 +23,7 @@ p{
     font-size: small;
 }
 img{
-    max-width: 90%;
+    max-width: 100%;
     border-radius: 50px;
     transition: transform 200ms;
     filter: drop-shadow(0 0 0.75rem rgb(194, 194, 194));
@@ -86,6 +85,45 @@ h2{
 .footnote::first-letter{
     font-size: 1em;
 }
+nav.bar {
+    display: flex;
+    border: 1px solid rgb(44, 44, 44);
+    padding: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 20px;
+    filter: drop-shadow(0 0 0.5rem rgb(194, 194, 194, 0.5));
+    justify-content: space-evenly;
+}
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+
+}
+nav a:visited{
+    color: white;
+}
+nav a:hover { 
+    text-decoration: underline; 
+    transform: scale(0.98);
+    filter: drop-shadow(0 0 0.5rem rgb(194, 194, 194, 0.5));
+}
+section {
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+    border-bottom: 2px dashed #ccc;
+}
+.card {
+    padding: 0px;
+    border-radius: 12px;
+    }
+.gallery{
+    /* padding: 100px; */
+}
+
 
 #Kendal{
     color: aqua;
