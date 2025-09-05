@@ -1,0 +1,117 @@
+
+/* various background colors 
+header with background, flexbox links, hover effect
+gallery with .card elements (boredrs, padding, background color, hover
+footer with background color and centered text
+*/
+* {
+    font-family: 'OpenDyslexic3Regular';
+    font-weight: normal;
+    font-style: normal; 
+}
+body{
+    background-image: url('../bg-aurora.png');
+    background-size: cover;
+
+}
+p{
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    line-height: 1.5;
+    font-size: small;
+}
+img{
+    max-width: 90%;
+    border-radius: 50px;
+    transition: transform 200ms;
+    filter: drop-shadow(0 0 0.75rem rgb(194, 194, 194));
+    margin-bottom: 10px;
+}
+img:hover{
+    transform: scale(0.98);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+p::first-letter{
+    font-size: 1.2em;
+}
+.myHeader{
+    font-family: "Sigmar One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:white;
+    padding-left: 20px;
+    font-size: xx-large;
+}
+.grid {
+    margin: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);        
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.characterSheet{
+    margin: 10px;
+    display: grid;
+    justify-content: space-around;
+    background-color: rgba(1, 1, 1, 0.5);        
+    padding: 10px;
+    padding-left: 20px;
+    border: 2px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-sizing: border-box;      
+}
+.header{
+    color:white;
+    padding-left: 20px;
+}
+header.characterSheet{
+    font-size: larger;
+}
+h2{
+    display: inline-block;
+}
+.footnote{
+    font-size: x-small;
+    margin-left: 20px;
+    margin-right:20px;
+}
+.footnote::first-letter{
+    font-size: 1em;
+}
+
+#Kendal{
+    color: aqua;
+    border: 5px solid aqua;
+}
+#Alinua{
+    color: chartreuse;
+    border: 5px solid chartreuse;
+}
+#Erin{
+    color:rebeccapurple;
+    border: 5px solid rebeccapurple;
+}
+#Falst{
+    color:sienna;
+    border: 5px solid sienna;
+}
+#Dainix{
+    color:chocolate;
+    border: 5px solid chocolate;
+}
+#Tess{
+    color:gold;
+    border: 5px solid gold;
+}
+#none{
+    color:white;
+    border: 5px solid white;
+}
