@@ -74,6 +74,8 @@ p::first-letter{
 .header{
     color:white;
     padding-left: 20px;
+}
+h{
     font-size: larger;
 }
 header.characterSheet{
