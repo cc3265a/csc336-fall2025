@@ -2,12 +2,15 @@
 /* 
 Note to professor: While I do not have all the style attributes requested on my "gallery" elements, I do prove my understanding of them on other classes (images and characterSheets) I hope this is sufficient. Thanks!
 */
-
-html{
-    font-family: 'OpenDyslexic3Regular';
-    font-weight: normal;
-    font-style: normal; 
+@font-face {
+    font-family: OpenDyslexic-Regular;
+    src: url('../ttf/OpenDyslexic-Regular.ttf');
+}
+* {
+    font-family: 'OpenDyslexic-Regular';
     font-size: medium;
+    padding: 0;
+    margin: 0;
 }
 body{
     background-image: url('../bg-aurora.png');
