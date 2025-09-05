@@ -120,8 +120,18 @@ section {
     padding: 0px;
     border-radius: 12px;
     }
-.gallery{
-    /* padding: 100px; */
+/* .gallery{
+    /* padding: 100px;
+} */
+footer.fixed {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+    color: white;
+    text-align: center;
+    font-size: xx-small;
+    line-height: 3;
 }
 
 
