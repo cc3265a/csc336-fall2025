@@ -1,7 +1,3 @@
-console.log("eeee");
-let demoBoxes = document.getElementsByClassName("demo-box");
-console.log(demoBoxes.length);
-
 let clickCount = -1;
 let dualCount = 0;
 
