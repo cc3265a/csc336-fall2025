@@ -1,4 +1,4 @@
-let clickCount = -1;
+let clickCount = 0;
 let dualCount = 0;
 
 var myStringArray = [
@@ -55,20 +55,12 @@ let checkDiv = document.getElementById("check");
 
 
 function clickedOnDemoBox(){
-    console.log("CLICK");
-    
-    if (dualCount == 1){
-        dualCount = 0;
-    }
-    else{
-        dualCount = 1;
-        clickCount = clickCount + 2;
-    }
+    console.log("clickCount " + clickCount);
 
-    promptDiv.innerText = myStringArray[clickCount-1];
+    promptDiv.innerText = myStringArray[clickCount];
 
     if (dualCount == 0){
-        check.innerText = myStringArray[clickCount];
+        check.innerText = myStringArray[clickCount+1];
         checkDiv.style.backgroundColor = "lightgreen";
         // console.log("green");
         increaseProgress();
@@ -78,6 +70,20 @@ function clickedOnDemoBox(){
         checkDiv.style.backgroundColor = "lightgray";
         // console.log("gray");
     }
+
+    if (dualCount == 1){
+        dualCount = 0;
+    }
+    else{
+        dualCount = 1;
+        if (clickCount < 45){
+            clickCount = clickCount + 2;
+        }
+        else{
+            clickCount = 0;
+        }
+    }
+
     
 }
 
@@ -85,7 +91,7 @@ const progressBar = document.getElementById('progress');
 
 function increaseProgress() 
 {
-    console.log("progress");
+    // console.log("progress");
     if (clickCount < 46) {
         progressBar.style.width = clickCount*2.23 + '%';    
         }

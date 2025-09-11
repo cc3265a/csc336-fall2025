@@ -45,7 +45,7 @@
 
 .progressBar {
     width: 100%;
-    background-color: #525252;
+    /* background-color: #525252; */
     height: 30px;
     margin-bottom: 10px;
     border: 2px rgba(52, 52, 52, 0.5);
@@ -54,7 +54,7 @@
 
 .progress {
     width: 0%;
-    height: 100%;
+    height: 80%;
     background-color: #4caf50;
     transition: width 0.3s ease;
     border-radius: 20px;
