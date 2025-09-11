@@ -98,7 +98,7 @@ function increaseProgress()
 }
 
 
-// note: loop dialogue
 // note: make button look nice
-// note: progress bar?
 // note: how many times you've looped
+// note: something togglable
+// note: maybe make it flexible for any 2 person script? so the user can type it in like in the complex example?

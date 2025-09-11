@@ -59,3 +59,13 @@
     transition: width 0.3s ease;
     border-radius: 20px;
 }
+
+.explaination{
+    background-color: lightblue;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    margin: 20px;
+    color:black;
+    font-size: large;
+}
