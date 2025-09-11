@@ -69,9 +69,13 @@ function clickedOnDemoBox(){
 
     if (dualCount == 0){
         check.innerText = myStringArray[clickCount];
+        checkDiv.style.backgroundColor = "lightgreen";
+        console.log("green");
     }
     else{
         check.innerText = "???";
+        checkDiv.style.backgroundColor = "lightgray";
+        console.log("gray");
     }
     
 }
