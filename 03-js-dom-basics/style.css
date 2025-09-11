@@ -1,3 +1,11 @@
+body{
+    background-image: url('../water-bg.jpg');
+    background-size: 30%;
+    display: grid;
+    /* background: linear-gradient(to top, #04fde4ba, #07fa80cc), url('../water-bg.jpg'); */
+    background: linear-gradient(to top, rgba(0, 255, 145, 0.5), rgba(0, 255, 213, 0.5)), url('../water-bg.jpg');
+}
+
 .myHeader{
     font-family: "Sigmar One", sans-serif;
     font-weight: 400;
@@ -7,14 +15,21 @@
     color:white; 
     text-align: center;
     background: linear-gradient( 90deg, rgb(22, 174, 239) 0%, rgb(107, 230, 31) 100%, rgba(20, 105, 55, 1) 100%, rgb(31, 247, 96) 87% );
+    background-image: url('../frog-header.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
     text-shadow: 2px 2px 5px aqua;
     padding: 5px;
     margin: 10px;
     border-radius: 20px;
+    height: 100%;
+    /* width: 100%; */
+    text-align: center;
+    margin-bottom: 88px;
 }
 
 .script-text{
-    background-color: pink;
+    background-color: #fad7bb;
     border-radius: 20px;
     text-align: center;
     padding: 15px;
@@ -27,12 +42,12 @@
 
 .myDiv{
     display: grid;
-    border: 1px solid rgb(44, 44, 44);
+    border: 1px solid #39a686;
     padding: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-    background-color: rgb(44, 44, 44);
+    margin-left: 20%;
+    margin-right: 20%;
+    /* margin-bottom: 30px; */
+    background-color: #39a686;
     border-radius: 20px;
     filter: drop-shadow(0 0 0.5rem rgb(194, 194, 194, 0.5));
 }
@@ -61,13 +76,14 @@
 }
 
 .explaination{
-    background-color: lightblue;
+    background-color: #bde2e0;
     border-radius: 20px;
     text-align: center;
     padding: 15px;
     margin: 20px;
     color:black;
     font-size: large;
+    margin-top: 40px;
 }
 .hidden{
     display: none;
@@ -79,4 +95,9 @@
     transform: scale(0.95);
     color: rgb(49, 152, 255);
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+}
+.button{
+    background-color: #fdb398;
+    width: 30%;
+    transform: translateX(120%);
 }

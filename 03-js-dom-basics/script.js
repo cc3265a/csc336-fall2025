@@ -74,7 +74,7 @@ function clickedOnDemoBox(){
 
     if (dualCount == 0){
         check.innerText = myStringArray[clickCount+1];
-        checkDiv.style.backgroundColor = "lightgreen";
+        checkDiv.style.backgroundColor = "#bcd536";
         // console.log("green");
         increaseProgress();
     }
