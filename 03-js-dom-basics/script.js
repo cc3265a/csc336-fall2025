@@ -1,5 +1,6 @@
-let clickCount = 0;
+let clickCount = -2;
 let dualCount = 0;
+let runCountVar = 0;
 
 var myStringArray = [
     "Xanthias! Hey, Xanthias!",
@@ -53,6 +54,7 @@ var myStringArray = [
 let promptDiv = document.getElementById("prompt");
 let checkDiv = document.getElementById("check");
 let toggleDiv = document.getElementById("exp");
+let countDiv = document.getElementById("runCount");
 
 function clickedOnExp(){
     console.log("toggle");
@@ -66,17 +68,24 @@ function clickedOnExp(){
 
 }
 
+function loading(){
+    console.log("loaded");
+}
 
 function clickedOnDemoBox(){
     console.log("clickCount " + clickCount);
-
-    promptDiv.innerText = myStringArray[clickCount];
+    if(typeof myStringArray[clickCount] != 'undefined'){
+        promptDiv.innerText = myStringArray[clickCount];
+    }
 
     if (dualCount == 0){
-        check.innerText = myStringArray[clickCount+1];
+        if(typeof myStringArray[clickCount] != "undefined"){
+            check.innerText = myStringArray[clickCount+1];
+        }
+        else{
+            check.innerText = myStringArray["???"];
+        }
         checkDiv.style.backgroundColor = "#bcd536";
-        // console.log("green");
-        increaseProgress();
     }
     else{
         check.innerText = "???";
@@ -94,9 +103,11 @@ function clickedOnDemoBox(){
         }
         else{
             clickCount = 0;
+            runCountVar++;
+            runCountFunc();
         }
     }
-
+    increaseProgress();
     
 }
 
@@ -105,13 +116,15 @@ const progressBar = document.getElementById('progress');
 function increaseProgress() 
 {
     // console.log("progress");
-    if (clickCount < 46) {
+    if (clickCount < 45) {
         progressBar.style.width = clickCount*2.23 + '%';    
-        }
+    }
+}
+
+function runCountFunc(){
+    countDiv.innerText = runCountVar;
 }
 
 
-// note: make button look nice
 // note: how many times you've looped
-// note: something togglable
 // note: maybe make it flexible for any 2 person script? so the user can type it in like in the complex example?
