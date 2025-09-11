@@ -52,6 +52,19 @@ var myStringArray = [
 
 let promptDiv = document.getElementById("prompt");
 let checkDiv = document.getElementById("check");
+let toggleDiv = document.getElementById("exp");
+
+function clickedOnExp(){
+    console.log("toggle");
+
+    if (toggleDiv.classList.contains("hidden")){
+        toggleDiv.classList.remove("hidden");
+    }
+    else{
+        toggleDiv.classList.add("hidden");
+    }
+
+}
 
 
 function clickedOnDemoBox(){
@@ -76,7 +89,7 @@ function clickedOnDemoBox(){
     }
     else{
         dualCount = 1;
-        if (clickCount < 45){
+        if (clickCount < 43){
             clickCount = clickCount + 2;
         }
         else{
