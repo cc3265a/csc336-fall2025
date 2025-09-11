@@ -70,12 +70,29 @@ function clickedOnDemoBox(){
     if (dualCount == 0){
         check.innerText = myStringArray[clickCount];
         checkDiv.style.backgroundColor = "lightgreen";
-        console.log("green");
+        // console.log("green");
+        increaseProgress();
     }
     else{
         check.innerText = "???";
         checkDiv.style.backgroundColor = "lightgray";
-        console.log("gray");
+        // console.log("gray");
     }
     
 }
+
+const progressBar = document.getElementById('progress');
+
+function increaseProgress() 
+{
+    console.log("progress");
+    if (clickCount < 46) {
+        progressBar.style.width = clickCount*2.23 + '%';    
+        }
+}
+
+
+// note: loop dialogue
+// note: make button look nice
+// note: progress bar?
+// note: how many times you've looped
