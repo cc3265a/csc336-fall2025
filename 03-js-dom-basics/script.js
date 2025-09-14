@@ -56,6 +56,7 @@ let checkDiv = document.getElementById("check");
 let toggleDiv = document.getElementById("exp");
 let countDiv = document.getElementById("runCount");
 
+
 function clickedOnExp(){
     console.log("toggle");
 
@@ -108,7 +109,6 @@ function clickedOnDemoBox(){
         }
     }
     increaseProgress();
-    addFrog();
     
 }
 
@@ -116,29 +116,27 @@ const progressBar = document.getElementById('progress');
 
 function increaseProgress() 
 {
-    // console.log("progress");
     if (clickCount < 45) {
         progressBar.style.width = clickCount*2.23 + '%';    
     }
-    // addFrog();
 }
 
 function runCountFunc(){
     countDiv.innerText = runCountVar;
+    addFrog();
 }
 
 function addFrog(){
     console.log("frog generated");
     let frogDiv = document.createElement("div");
+    let frogImgDiv = document.getElementById("frogCount");
     let img = new Image();
     img.classList.add("frogImg");
     img.src = 'round-frog.png';
 
 
     frogDiv.appendChild(img);
-    // document.body.insertBefore(newDiv, currentDiv);
-    countDiv.insertBefore(frogDiv, frogDiv);
-    // countDiv.appendChild(frogDiv);
+    frogImgDiv.append(frogDiv);
 }
 
 // note: maybe make it flexible for any 2 person script? so the user can type it in like in the complex example?
