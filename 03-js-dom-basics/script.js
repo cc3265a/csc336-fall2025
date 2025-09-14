@@ -108,6 +108,7 @@ function clickedOnDemoBox(){
         }
     }
     increaseProgress();
+    addFrog();
     
 }
 
@@ -119,12 +120,26 @@ function increaseProgress()
     if (clickCount < 45) {
         progressBar.style.width = clickCount*2.23 + '%';    
     }
+    // addFrog();
 }
 
 function runCountFunc(){
     countDiv.innerText = runCountVar;
 }
 
+function addFrog(){
+    console.log("frog generated");
+    let frogDiv = document.createElement("div");
+    let img = new Image();
+    img.classList.add("frogImg");
+    img.src = 'round-frog.png';
 
-// note: how many times you've looped
+
+    frogDiv.appendChild(img);
+    // document.body.insertBefore(newDiv, currentDiv);
+    countDiv.insertBefore(frogDiv, frogDiv);
+    // countDiv.appendChild(frogDiv);
+}
+
 // note: maybe make it flexible for any 2 person script? so the user can type it in like in the complex example?
+// note: character descriptions

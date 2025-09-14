@@ -109,10 +109,11 @@ body{
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-    margin-left: 21%;
     color:black;
     font-size: large;
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-gap: 20px; */
 }
 .footer{
     position: static;
@@ -127,4 +128,8 @@ body{
     margin-top: 10px;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.frogImg{
+    width: 20%;
 }
