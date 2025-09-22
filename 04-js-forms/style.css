@@ -1,8 +1,94 @@
-.diceRoll{
-    color:navy
+html{
+    background: url('LabWater.jpg');
+    background-position: center -10px;
+    background-size: auto 100%;
 }
 
-.stats{
+.mainBody{
+    background-color: rgba(0, 0, 0, 0.5);        
+    padding: 10%;
+    padding-top: 5%;
+    margin: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: white;
+    border-radius: 25px;
+}
+
+.script-text{
+    background-color: #0b3d4e;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    margin: 20px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color:white;
+    font-size: large;
+}
+
+#addNames{
+    margin-bottom: 20px;
+}
+
+#addNewDialogue{
+    margin-bottom: 20px;
+}
+
+.name{
+    text-align: center;
+    font-size: large;
+    margin-top: 10px;
+}
+
+.myForm{
+    display: grid;
+}
+
+.myButtons{
     display: flex;
-    gap: 40px;
+    margin: 20%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button{
+    margin: 2%;
+    margin-left: 0%;
+    max-width: 50%;
+    background-color: #57b8be;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+input{
+    background-color: #177594;
+    border-radius: 20px;
+    border-color: #177594;
+    padding-left: 10px;
+}
+
+#userColor{
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: -10px;
+}
+
+#rating{
+    max-width: 20%;
+    margin-bottom: 10px;
+}
+
+.colorBox{
+    width: 10%;
+    border-radius: 20%;
+}
+
+.reviewBox{
+    margin: 10%;
+    border-radius: 20px;
+    border-color: white;
+    border-style: solid;
+    padding: 20px;
+    padding-top: 0px;
 }

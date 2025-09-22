@@ -8,22 +8,67 @@
     </head>
 
     <body>
-        <button onclick="rollDice()">Roll Dice</button>
-        <div id="diceRoll"><p></p></div>
-        <div id="addNewAnimal">
-            <form id="addAnimalForm">
-                <label for="animalTypeField" type="text">Animal Type</label>
-                <input id="animalTypeField" type="text"></input>
-                
-                <label for="animalStrengthField" type="number">Animal Strength</label>
-                <input id="animalStrengthField" type="number"></input>
+        <div class = "mainBody">
+            <h2>Dialogue Maker</h2>
 
-                <label for="animalCharismaField" type="number">Animal Charisma</label>
-                <input id="animalCharismaField" type="number"></input>
+            <div id="addNames">
+                <form id="addNamesForm" class="myForm">
+                    <label for="name1" type="text">Name 1</label>
+                    <input id="name1" type="text"></input>
 
-                <button type="submit" id="addAnimalButton">Add Animal</button>
-            </form>
+                    <label for="name2" type="text">Name 2</label>
+                    <input id="name2" type="text"></input>
+
+                    <button type="submit" id="addNamesButton">Add Names</button>
+                </form>
+            </div>
+
+
+            <div id="addNewDialogue">
+                <form id="addDialogueForm" class="myForm">
+                    <label for="newLine1" type="text">Line for Speaker 1</label>
+                    <input id="newLine1" type="text"></input>
+
+                    <label for="newLine2" type="text">Line for Speaker 2</label>
+                    <input id="newLine2" type="text"></input>
+
+                    <button type="submit" id="addDialogueButton">Add Dialogue</button>
+                </form>
+            </div>
+            <div class="myButtons">
+                <button id="nextLine" onclick="updateScriptDiv()">Next Line</button>
+                <button id="clearScript" onclick="clearScript()">Clear Script</button>
+                <button id="frogsScript" onclick="frogsScript()">Frogs Script</button>
+            </div>
+
+            <div id="name1Display" class="name"></div>
+            <div class="script-text" id="lines1Box"></div>
+            <div id="name2Display" class="name"></div>
+            <div class="script-text" id="lines2Box"></div>
         </div>
-        <div id="info"></div>
+        <div class = "mainBody">
+            <h2>How do you feel about your website experience?</h2>
+            <div id="reviewDiv">
+                <form id="reviewForm" class="myForm">
+                    <label for="revName" type="text">Your Name</label>
+                    <input id="revName" type="text"></input>
+
+                    <label for="rating" type="number">How would you rate your experience?</label>
+                    <input id="rating" type="number"></input>
+                    
+                    <label for="userColor">What color describes how you feel?</label>
+                    <input type="color" id="userColor" name="userColor" value="#57b8be" />
+                    
+                    <button type="submit" id="reviewSubmit">Submit Review</button>
+                </form>
+            </div>
+            <div id="reviewList" style="border-color: aliceblue;">
+                
+            </div>
+
+
+        </div>
+
+
     </body>
 </html>
