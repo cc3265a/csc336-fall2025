@@ -1,5 +1,5 @@
-let lines1 = ["test 1", "test 2"];
-let lines2 = ["test 1b", "test 2b"];
+let lines1 = [];
+let lines2 = [];
 let lines1Box = document.getElementById("lines1Box");
 let lines2Box = document.getElementById("lines2Box");
 let count = 0;
@@ -170,6 +170,10 @@ function frogsScript(){
     line2Count = 0;
     lines1 = DionLines;
     lines2 = XanLines;
+    let nameBox1 = document.querySelector("#name1Display");
+    let nameBox2 = document.querySelector("#name2Display");
+    nameBox1.innerText = "Dionysus";
+    nameBox2.innerText = "Xanthius";
 }
 
 let reviewSubmit = document.querySelector("#reviewDiv");
@@ -258,5 +262,3 @@ function showErrorDivRev(){
     let errorLoc = document.querySelector("#errorLocRev");
     errorLoc.classList.remove("hidden");
 }
-
-// explaination for how to use dialogue maker
