@@ -118,6 +118,7 @@ function addNewDialogue(e){
     lines2.push(newLine2);
     // createErrorDiv("&nbsp;");
     hideErrorDiv();
+    clearInput();
 }
 
 let addNamesForm = document.querySelector("#addNamesForm");
@@ -153,6 +154,7 @@ function addNewNames(e){
     nameBox1.innerText = name1Text;
     nameBox2.innerText = name2Text;
     // Treanor, I hope you can forgive me for not storing these names in an array, I hope I have showed in the other forms that I know how to do this.
+    clearInput();
 }
 
 function clearScript(){
@@ -204,6 +206,7 @@ function submitReview(e){
     console.log(reviews);
     // createErrorRevDiv("&nbsp;");
     hideErrorDivRev();
+    clearInput();
 }
 
 function displayReviews(){
@@ -261,4 +264,12 @@ function hideErrorDivRev(){
 function showErrorDivRev(){
     let errorLoc = document.querySelector("#errorLocRev");
     errorLoc.classList.remove("hidden");
+}
+
+function clearInput(){
+    let myList = [];
+    myList = document.getElementsByClassName("myInput");
+    for (i = 0; i < myList.length; i++){
+        myList[i].value = "";
+    }
 }
