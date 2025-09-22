@@ -9,7 +9,6 @@ let nextButton = document.getElementById("#nextLine");
 let name1Text = "";
 let name2Text = "";
 let reviews = [];
-let numReview = 0;
 
 let DionLines = [
     "Xanthias! Hey, Xanthias!",
@@ -62,10 +61,6 @@ let XanLines = [
 ]
 
 function updateScriptDiv(){
-    console.log(line1Count);
-    console.log(line2Count);
-    console.log(lines1);
-    console.log(lines2);
     if(line2Count > line1Count){
         line2Count = line1Count;
     }
@@ -81,7 +76,6 @@ function updateScriptDiv(){
         if(typeof lines1[line1Count] == "undefined"){
             lines1Box.innerText = "???";
             lines2Box.innerText = "???";
-            console.log("my undefined");
         }
         else{
             lines1Box.innerText = lines1[line1Count];
@@ -108,19 +102,22 @@ function addNewDialogue(e){
     let newLine2 = document.querySelector("#newLine2").value;
 
     if (newLine1.length < 2){
+        showErrorDiv();
+        createErrorDiv("Error, line 1 is too short!");
         console.log("Error, line 1 is too short!");
         return;
     }
     if (newLine2.length < 2){
+        showErrorDiv();
+        createErrorDiv("Error, line 2 is too short!");
         console.log("Error, line 2 is too short!");
         return;
     }
     
-    //console.log(newLine1);
-    //console.log(newLine2);
-
     lines1.push(newLine1);
     lines2.push(newLine2);
+    // createErrorDiv("&nbsp;");
+    hideErrorDiv();
 }
 
 let addNamesForm = document.querySelector("#addNamesForm");
@@ -134,12 +131,16 @@ function addNewNames(e){
 
     if (name1Text.length > 0){
         if (name1Text[0] != name1Text[0].toUpperCase()){
+            showErrorDiv();
+            createErrorDiv("Error, name 1 must be capitalized!");
             console.log("Error, name 1 must be capitalized!");
             return;
         }
     }
     if (name1Text.length > 0){
         if (name2Text[0] != name2Text[0].toUpperCase()){
+            showErrorDiv();
+            createErrorDiv("Error, name 2 must be capitalized!");
             console.log("Error, name 2 must be capitalized!");
             return;
         }
@@ -147,7 +148,8 @@ function addNewNames(e){
 
     let nameBox1 = document.querySelector("#name1Display");
     let nameBox2 = document.querySelector("#name2Display");
-    
+    // createErrorDiv("&nbsp;");
+    hideErrorDiv();
     nameBox1.innerText = name1Text;
     nameBox2.innerText = name2Text;
     // Treanor, I hope you can forgive me for not storing these names in an array, I hope I have showed in the other forms that I know how to do this.
@@ -181,6 +183,13 @@ function submitReview(e){
     let colorInput = document.querySelector("#userColor").value;
     let nameInput = document.querySelector("#revName").value;
 
+    if (scoreInput < 5){
+        showErrorDivRev();
+        createErrorRevDiv("score too low! You cant hate it that much ;)")
+        console.log("score too low! You cant hate it that much ;)")
+        return;
+    }
+
     let newReview = {
         name: nameInput,
         score: scoreInput,
@@ -188,9 +197,9 @@ function submitReview(e){
     }
     reviews.push(newReview);
     displayReviews();
-    numReview++;
-    console.log(typeof color);
-    console.log(colorInput);
+    console.log(reviews);
+    // createErrorRevDiv("&nbsp;");
+    hideErrorDivRev();
 }
 
 function displayReviews(){
@@ -213,3 +222,41 @@ function createReviewDiv(rev){
         
     `;
 }
+function createErrorDiv(msg){
+    let errorHTML =  `
+        <div class="errorDiv">
+            <p>${msg}</p>
+        </div>
+        
+    `;
+    let errorLoc = document.querySelector("#errorLoc");
+    errorLoc.innerHTML = errorHTML;
+}
+function createErrorRevDiv(msg){
+    let errorHTML =  `
+        <div class="errorDiv">
+            <p>${msg}</p>
+        </div>
+        
+    `;
+    let errorLoc = document.querySelector("#errorLocRev");
+    errorLoc.innerHTML = errorHTML;
+}
+function hideErrorDiv(){
+    let errorLoc = document.querySelector("#errorLoc");
+    errorLoc.classList.add("hidden");
+}
+function showErrorDiv(){
+    let errorLoc = document.querySelector("#errorLoc");
+    errorLoc.classList.remove("hidden");
+}
+function hideErrorDivRev(){
+    let errorLoc = document.querySelector("#errorLocRev");
+    errorLoc.classList.add("hidden");
+}
+function showErrorDivRev(){
+    let errorLoc = document.querySelector("#errorLocRev");
+    errorLoc.classList.remove("hidden");
+}
+
+// explaination for how to use dialogue maker

@@ -60,12 +60,18 @@ button{
     border-radius: 10px;
     border-color: transparent;
 }
+button:hover{
+    transform: scale(0.95);
+    /* color: rgb(49, 152, 255); */
+    box-shadow: 2px 2px 2px rgba(16, 109, 137, 0.8);
+}
 
 input{
     background-color: #177594;
     border-radius: 20px;
     border-color: #177594;
     padding-left: 10px;
+    color: white;
 }
 
 #userColor{
@@ -80,8 +86,8 @@ input{
 }
 
 .colorBox{
-    width: 10%;
-    border-radius: 20%;
+    width: 50%;
+    border-radius: 20px;
 }
 
 .reviewBox{
@@ -91,4 +97,15 @@ input{
     border-style: solid;
     padding: 20px;
     padding-top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.errorDiv{
+    background-color: rgb(125, 12, 12);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 70%;
+}
+.hidden{
+    display: none;
 }
