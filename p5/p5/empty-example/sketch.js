@@ -34,14 +34,30 @@ class Dot {
     this.hue = Math.random()*360;
     this.index = index;
     this.radius = 10+ dots.length-this.index*2;
+
+    this.velocityX = random(-1,1)*this.radius/10;
+    this.velocityY = random(-1,1)*this.radius/10;
+
+
   }
   draw(){
     // this.x += (-0.5 + Math.random()) *10;
-    this.y+= (-0.5 + Math.random()) *10;
+    // this.y+= (-0.5 + Math.random()) *10;
 
-    this.x += map(Math.random(), 0, 1, -1, 1);
+    // this.x += map(Math.random(), 0, 1, -1, 1);
 
     // this.hue = Math.random()*360;
+
+    this.x += this.velocityX;
+    this.y += this.velocityY;
+
+    if (this.x > width || this.x <0){
+      this.velocityX *= -1;
+    }
+
+    if (this.y > height || this.y <0){
+      this.velocityY *= -1;
+    }
 
     fill(this.hue, 60, 100);
     ellipse(this.x, this.y, this.radius, this.radius);
