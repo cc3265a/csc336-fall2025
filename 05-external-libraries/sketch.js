@@ -89,7 +89,7 @@ class Dot {
       }
     }
 
-    fill(this.hue, 6, 100);
+    fill(this.hue, 10, 100);
     ellipse(this.x, this.y, this.radius, this.radius);
   }
 }
@@ -134,7 +134,7 @@ class SmallDot {
       }
     }
 
-    fill(this.hue, 6, 100);
+    fill(this.hue, 10, 100);
     ellipse(this.x, this.y, this.radius, this.radius);
   }
 }

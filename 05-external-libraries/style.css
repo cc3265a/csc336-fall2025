@@ -1,18 +1,21 @@
 html{
-    background: black;
-    background-position: center -10px;
-    background-size: auto 100%;
+    background: red;
+    /* background-position: center -10px; */
+    /* background-size: auto 100%; */
+    background: url('stars_grey_bg.png');
+    background-size: cover;
 }
 
 .mainBody{
-    background-color: grey;        
-    padding: 10%;
-    padding-top: 5%;
+    background-color: rgba(201, 196, 196, 0.2);        
+    padding: 60px;
+    padding-top: 5px;
     margin: 20%;
     margin-top: 1%;
     margin-bottom: 5%;
     color: white;
     border-radius: 25px;
+    box-shadow: 0px 0px 100px 5px white;
 }
 #myCanv{
     background-color: rgb(35, 35, 35);
@@ -27,22 +30,47 @@ canvas{
 }
 p{
     color:white;
+    font-size: 30px;
 }
 h1{
-    font-size: XX-large;
+    font-size: 70px ;
+}
+h2{
+    font-size: 50px;
+}
+h3{
+    font-size: 40px;
 }
 #name{
     font-size: 100px;
     text-align: center;
     margin-bottom: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 15px;
 }
 .food{
-    background-color: rgb(12, 59, 59);
+    background-color: rgb(39, 39, 39);
     border-radius: 30px;
+    border: solid rgb(39, 39, 39) 7px;
     padding: 20px;
+    margin: 3px;
 }
 .food:hover{
-    margin: 3px;
-    box-shadow: aqua;
-    background-color: red;
+    box-shadow: 0px 0px 10px 1px white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+footer{
+    background-color: rgb(37, 37, 54);
+    font-size: larger;
+    padding: 20px;
+    text-align: center;
+    color:white;
+    border-radius: 10px;
+}
+.desc{
+    font-size: 20px;
+}
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
