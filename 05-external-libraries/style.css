@@ -30,23 +30,26 @@ canvas{
 }
 p{
     color:white;
-    font-size: 30px;
+    /* font-size: 10px; */
 }
-h1{
-    font-size: 70px ;
+/* h1{
+    font-size: 50px ;
 }
 h2{
-    font-size: 50px;
+    font-size: 30px;
 }
 h3{
-    font-size: 40px;
-}
+    font-size: 20px;
+} */
 #name{
     font-size: 100px;
     text-align: center;
     margin-bottom: 0;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding-top: 15px;
+    background: linear-gradient( 180deg, rgb(5, 57, 79) 0%, rgb(4, 1, 29) 100%, rgba(5, 57, 79, 1) 100%, rgb(31, 247, 96) 87% );
+    border-radius: 20px;
+
 }
 .food{
     background-color: rgb(39, 39, 39);
@@ -57,8 +60,8 @@ h3{
 }
 .food:hover{
     box-shadow: 0px 0px 10px 1px white;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 footer{
     background-color: rgb(37, 37, 54);

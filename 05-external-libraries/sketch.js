@@ -3,7 +3,7 @@ let f = 30;
 let canvDiv = document.getElementById("myCanv");
 
 function setup() {
-  let myThing = createCanvas(1783, 300)
+  let myThing = createCanvas(1145, 300)
   myThing.parent(canvDiv);
   colorMode(HSB);
   noStroke();
