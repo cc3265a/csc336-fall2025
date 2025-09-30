@@ -36,3 +36,13 @@ h1{
     text-align: center;
     margin-bottom: 0;
 }
+.food{
+    background-color: rgb(12, 59, 59);
+    border-radius: 30px;
+    padding: 20px;
+}
+.food:hover{
+    margin: 3px;
+    box-shadow: aqua;
+    background-color: red;
+}
