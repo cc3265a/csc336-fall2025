@@ -1,9 +1,11 @@
 let dots = [];
 let f = 30;
 let canvDiv = document.getElementById("myCanv");
+let myWidth = canvDiv.offsetWidth - 40;
+console.log(myWidth);
 
 function setup() {
-  let myThing = createCanvas(1145, 300)
+  let myThing = createCanvas(myWidth, 300)
   myThing.parent(canvDiv);
   colorMode(HSB);
   noStroke();
@@ -46,7 +48,6 @@ function draw() {
     circle(width/2, height/2, 70)
 
   f++
-  print(dots.length)
 }
 
 class Dot {
