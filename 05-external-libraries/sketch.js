@@ -1,21 +1,20 @@
 let dots = [];
 let f = 30;
-let canvas = document.querySelector("#myCanvas");
-let width = this.width;
+let canvDiv = document.getElementById("myCanv");
 
 function setup() {
- // put setup code here
-  //createCanvas(1000, 300);
+  let myThing = createCanvas(1783, 300)
+  myThing.parent(canvDiv);
   colorMode(HSB);
   noStroke();
 
 
   for (let i=0; i < 10; i++){
-    dot = new Dot(width/2, height/2, i);
+    let dot = new Dot(width/2, height/2, i);
     dots.push(dot);
   }
   for (let i=0; i < 20; i++){
-    dot = new SmallDot(width/2, height/2, i);
+    let dot = new SmallDot(width/2, height/2, i);
     dots.push(dot);
   }
 
