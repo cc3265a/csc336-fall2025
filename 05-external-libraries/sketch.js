@@ -48,6 +48,10 @@ function draw() {
     circle(width/2, height/2, 70)
 
   f++
+  // myWidth = canvDiv.offsetWidth - 40;
+  // console.log(myWidth);
+  // resizeCanvas(myWidth, 300);
+
 }
 
 class Dot {
