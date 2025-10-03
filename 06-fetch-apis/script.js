@@ -30,13 +30,12 @@ async function getAndDisplaySpace(){
 
     let spaceText = spaceData[0].explanation;
     let spaceDate = spaceData[0].date;
-    document.querySelector("#imgTextDiv").innerText = spaceText + " (" + spaceDate + ")";
+    let currentText = document.querySelector("#imgTextDiv");
+    let oldHTML = document.querySelector("#imgTextDiv").innerHTML;
+    let newHTML = `<p>${oldHTML}</p><p>${spaceText} (${spaceDate})</p>`;
 
+    currentText.innerHTML = newHTML;
     
-    // console.log(spaceText);
-
-    // console.log(spaceImageHTML.src);
-    // console.log(spaceData);
 }
 
 getAndDisplaySpace();
