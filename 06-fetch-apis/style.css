@@ -30,9 +30,9 @@ p{
     color: rgb(234, 214, 136);
 }
 #food{
-    background-color: rgb(39, 39, 39);
+    background-color: rgba(0, 0, 45, 0.7);
     border-radius: 30px;
-    border: solid rgb(39, 39, 39) 7px;
+    /* border: solid rgb(39, 39, 39) 7px; */
     padding: 20px;
     margin: 3px;
 }
