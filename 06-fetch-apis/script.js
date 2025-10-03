@@ -8,7 +8,7 @@ ISSLoc
         let latVar = data.iss_position.latitude;
         let myText = `${longVar}, ${latVar}`;
         textDiv.innerText = myText;
-        // console.log(data);
+        console.log(data);
     }
 
     );
@@ -32,7 +32,7 @@ async function getAndDisplaySpace(){
     let spaceDate = spaceData[0].date;
     let currentText = document.querySelector("#imgTextDiv");
     let oldHTML = document.querySelector("#imgTextDiv").innerHTML;
-    let newHTML = `<p>${oldHTML}</p><p>${spaceText} (${spaceDate})</p>`;
+    let newHTML = `<p>${spaceText} (${spaceDate})</p><p>${oldHTML}</p>`;
 
     currentText.innerHTML = newHTML;
     
