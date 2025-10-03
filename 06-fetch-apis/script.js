@@ -19,7 +19,7 @@ async function getAndDisplaySpace(){
     let spaceImageHTML = document.createElement("img");
 
     let mainBody = document.getElementsByClassName("mainBody");
-    let myWidth = mainBody.item(0).clientWidth -120;
+    let myWidth = mainBody.item(0).clientWidth -60;
     // console.log(mainBody);
     // console.log(myWidth);
 
