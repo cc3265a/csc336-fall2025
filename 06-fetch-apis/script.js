@@ -1,17 +1,26 @@
-let ISSLoc = fetch("http://api.open-notify.org/iss-now.json");
+let ISSLoc = fetch("https://www.dnd5eapi.co/api/monsters");
 ISSLoc
     .then(response => response.json())
     .then(data => 
     {
         let textDiv = document.querySelector("#textDiv");
-        let longVar = data.iss_position.longitude;
-        let latVar = data.iss_position.latitude;
-        let myText = `${longVar}, ${latVar}`;
-        textDiv.innerText = myText;
-        console.log(data);
+        let myNum = 0;
+        for (let i = 0; i < 100; i++){
+            myNum = Math.round(Math.random()*300);
+            // console.log(myNum);
+            if (data.results[myNum].hit_points >= 40){
+                exit;
+            } 
+            // console.log(i);
+            
+        }
+        
+        textDiv.innerText = `The ${data.results[myNum].name}`;
+        // console.log(data.results);
     }
 
     );
+   
 
 async function getAndDisplaySpace(){
     let spaceResponse = await fetch("https://api.nasa.gov/planetary/apod?api_key=QoTXK5ln5ElHpNtm0WhP0hIflqMX9Ub5YwnDj7hh&count=1&thumbs=True");
