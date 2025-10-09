@@ -88,6 +88,21 @@
                     "rarity": "Mythic"
                     }
                 ]
+                },
+                {
+                "name":"Petronille",
+                "role":"Sister",
+                "items":
+                [
+                    {
+                    "name": "Fishing Rod",
+                    "rarity": "Common"
+                    },
+                    {
+                    "name":"Net",
+                    "rarity": "Common"
+                    }
+                ]
                 }
             ]
             }
@@ -132,6 +147,21 @@
                     {
                     "name":"Silent Princess",
                     "rarity": "Rare"
+                    }
+                ]
+                },
+                {
+                "name":"Purah",
+                "role":"Scientist",
+                "items":
+                [
+                    {
+                    "name": "Notebook",
+                    "rarity": "Uncommon"
+                    },
+                    {
+                    "name":"Purah Pad",
+                    "rarity": "Legendary"
                     }
                 ]
                 }

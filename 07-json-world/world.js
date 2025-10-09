@@ -1,38 +1,26 @@
 import * as fs from 'fs'; // or import fs from 'fs';
 import express from "express";
 
-const app = express();
+let fileContent = fs.readFileSync("./world.json", "utf8");
+let myParse = JSON.parse(fileContent);
 
-const PORT = 3000;
+let regions = [];
+let towns = [];
+let people = [];
 
-let count = 0;
-
-app.listen(PORT, (req, res) => {
-    console.log("server started");
-});
-
-app.get("/test", (req, res) => {
-    console.log("someone made a get request with the 'test' endpoint");
-    res.send("hi there, this is server speaking");
-});
-
-
-let ranNum = [];
-
-//read ranNum.txt
-let fileContent = fs.readFileSync("./ranNum.txt", "utf8");
-
-
-for (let i = 0; i < 20; i++){
-    let rand = Math.random();
-    ranNum[i] = rand;
-    // console.log(ranNum[i]);
+for (let r = 0; r < myParse.regions.length; r++){
+    regions.push(myParse.regions[r].name)
+    for (let t = 0; t < myParse.regions[r].towns.length; t++){
+        towns.push(myParse.regions[r].towns[t].name);
+        for (let p = 0; p < myParse.regions[r].towns[t].notable_people.length; p++){
+            people.push(myParse.regions[r].towns[t].notable_people[p].name);
+        }
+    }
 }
+console.log("regions:");
+console.log(regions);
+console.log("towns:");
+console.log(towns);
+console.log("people:");
+console.log(people);
 
-fs.writeFileSync("ranNum.txt", JSON.stringify(ranNum));
-
-
-// console.log(fileContent);
-
-// ranNum = JSON.parse(fileContent);
-console.log(ranNum[0]);
