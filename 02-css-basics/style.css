@@ -12,7 +12,7 @@ Note to professor: While I do not have all the style attributes requested on my 
     margin: 0;
 }
 body{
-    background-image: url('../bg-aurora.png');
+    background-image: url('../images/bg-aurora.png');
     background-size: cover;
 }
 p{

@@ -1,6 +1,6 @@
 html {
     background-color: #19dcd6;
-    background: linear-gradient(to top, rgba(0, 255, 145, 0.5), rgba(0, 255, 213, 0.5)), url('../water-bg.jpg');
+    background: linear-gradient(to top, rgba(0, 255, 145, 0.5), rgba(0, 255, 213, 0.5)), url('../images/water-bg.jpg');
 }
 body{
     background-size: 30%;
@@ -18,7 +18,7 @@ body{
     color:#392412; 
     text-align: center;
     background: linear-gradient( 90deg, rgb(22, 174, 239) 0%, rgb(107, 230, 31) 100%, rgba(20, 105, 55, 1) 100%, rgb(31, 247, 96) 87% );
-    background-image: url('../frog-header.jpg');
+    background-image: url('../images/frog-header.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     text-shadow: 2px 2px 5px aqua;
