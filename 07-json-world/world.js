@@ -1,5 +1,4 @@
 import * as fs from 'fs'; // or import fs from 'fs';
-import express from "express";
 
 let fileContent = fs.readFileSync("./world.json", "utf8");
 let myParse = JSON.parse(fileContent);

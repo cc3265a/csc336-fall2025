@@ -1,0 +1,170 @@
+{
+  "regions": [
+    {
+      "name": "Exandria",
+      "climate": "Arid",
+      "towns": [
+        {
+          "name": "Zemni Fields",
+          "population": "300",
+          "notable_people": [
+            {
+              "name": "Caleb Widogast",
+              "role": "hero",
+              "items": [
+                {
+                  "name": "spellbook",
+                  "rarity": "Mythic"
+                },
+                {
+                  "name": "mud",
+                  "rarity": "common"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Menagerie Coast",
+          "population": "30000",
+          "notable_people": [
+            {
+              "name": "Jester Lavorre",
+              "role": "hero",
+              "items": [
+                {
+                  "name": "Sketch Book",
+                  "rarity": "Rare"
+                },
+                {
+                  "name": "Cupcake",
+                  "rarity": "Common"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vauguard",
+      "climate": "Frozen",
+      "towns": [
+        {
+          "name": "Dormont",
+          "population": "20",
+          "notable_people": [
+            {
+              "name": "Mirabelle",
+              "role": "hero",
+              "items": [
+                {
+                  "name": "Symbol of the Change God",
+                  "rarity": "Uncommon"
+                },
+                {
+                  "name": "Folder of People",
+                  "rarity": "Rare"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bambouche",
+          "population": "1000",
+          "notable_people": [
+            {
+              "name": "Boniface",
+              "role": "hero",
+              "items": [
+                {
+                  "name": "Cooking Pot",
+                  "rarity": "Uncommon"
+                },
+                {
+                  "name": "Hat",
+                  "rarity": "Mythic"
+                }
+              ]
+            },
+            {
+              "name": "Petronille",
+              "role": "Sister",
+              "items": [
+                {
+                  "name": "Fishing Rod",
+                  "rarity": "Common"
+                },
+                {
+                  "name": "Net",
+                  "rarity": "Common"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hyrule",
+      "climate": "Variable",
+      "towns": [
+        {
+          "name": "Hyrule Castle",
+          "population": "400",
+          "notable_people": [
+            {
+              "name": "Zelda",
+              "role": "Princess",
+              "items": [
+                {
+                  "name": "Notebook",
+                  "rarity": "Uncommon"
+                },
+                {
+                  "name": "Priestess's Dress",
+                  "rarity": "Rare"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hateno Villiage",
+          "population": "400",
+          "notable_people": [
+            {
+              "name": "Link",
+              "role": "Hero",
+              "items": [
+                {
+                  "name": "Master Sword",
+                  "rarity": "Legendary"
+                },
+                {
+                  "name": "Silent Princess",
+                  "rarity": "Rare"
+                }
+              ]
+            },
+            {
+              "name": "Purah",
+              "role": "Scientist",
+              "items": [
+                {
+                  "name": "Notebook",
+                  "rarity": "Uncommon"
+                },
+                {
+                  "name": "Purah Pad",
+                  "rarity": "Legendary"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
