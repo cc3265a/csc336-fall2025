@@ -18,12 +18,15 @@ async function loadWorld() {
     let peopleHTML = `<ul>`;
 
     for (let r = 0; r < data.regions.length; r++){
+        console.log(data); 
         regionHTML = regionHTML + `<li>${data.regions[r].name}</li>`;  
-        console.log("bbbb"); 
+        // console.log(data.regions[r].towns); 
+        // console.log(data.regions[r].towns[0]); 
         for (let t = 0; t < data.regions[r].towns.length; t++){
             townHTML = townHTML + `<li>${data.regions[r].towns[t].name}</li>`;  
             for (let p = 0; p < data.regions[r].towns[t].notable_people.length; p++){
-                peopleHTML = peopleHTML + `<li>${data.regions[r].towns[t].notable_people[p].name}</li>`;  
+                peopleHTML = peopleHTML + `<li>${data.regions[r].towns[t].notable_people[p].name}</li>`; 
+                // console.log("HERE"); 
             }
         }
      
@@ -64,14 +67,11 @@ nameForm.addEventListener("submit", async (e) => {
     let formDataInObjectForm = Object.fromEntries(formData.entries());
 
     // Tell the server to add excitement to a 
-    const res = await fetch("/addPerson", {
+    const res = await fetch("/addRegion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formDataInObjectForm)
     });
-
-    const updatedWorld = await res.json();
-    // document.getElementById("worldDiv").innerHTML =
-    //     `<ul><li>${updatedWorld.regions[0].towns[0].notable_people[0].name}</li></ul>`;
+    console.log(formDataInObjectForm);
     loadWorld();
 });

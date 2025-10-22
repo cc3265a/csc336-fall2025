@@ -18,63 +18,42 @@ app.get("/world", async (req, res) => {
     res.json(dataObject);
 });
 
-app.post("/excite", async (req, res) => {
-    // Read the file that contains all of the world info
-    const worldData = await fs.readFileSync("./world.json", "utf-8");
-    // As readFile brought in the data as a string, parse it into a JS object.
-    const world = JSON.parse(worldData);
-
-    // req.body is the json object sent to us from the client. 
-    // NOTE: it was parsed automatically by express (that's what the app.use(express.json()); does above)
-    const personToAddExcitementTo = req.body;
-    
-    // Find the person in one of the regions or cities, and add excitement to their name!
-    for (let region of world.regions) {
-        for (let city of region.towns) {
-            for (let person of city.notable_people) {
-                if (person.name === personToAddExcitementTo.name) {
-                    person.name += "!!!";
-                }
-            }
-        }
-    }
-
-    // Write it back to file
-    await fs.writeFileSync("world.json", JSON.stringify(world, null, 2));
-
-    // Now that we've modified the world data, and written it back to file
-    // send it back to the client.
-    res.json(world);
-});
-
-
-
 app.post("/addRegion", async (req, res) => {
-    // Read the file that contains all of the world info
     const worldData = await fs.readFileSync("./world.json", "utf-8");
-    // As readFile brought in the data as a string, parse it into a JS object.
     const world = JSON.parse(worldData);
-    console.log(world);
+    // console.log(world);
 
-    // req.body is the json object sent to us from the client. 
-    // NOTE: it was parsed automatically by express (that's what the app.use(express.json()); does above)
-    const regionToAdd = req.body;
+    const regionToAdd = req.body.name;
+    console.log(regionToAdd.body);
+
+    const townToAdd = req.body.townText;
+    const personToAdd = req.body.peopleText;
+
+    let newRegion = {
+      "name": regionToAdd,
+      "climate": "",
+      "towns": [
+        {
+          "name": townToAdd,
+          "population": "",
+          "notable_people": [
+            {
+              "name": personToAdd,
+              "role": "",
+              "items": [
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+
     
-
-    // Find the person in one of the regions or cities, and add excitement to their name!
-    for (let region of world.regions) {
-        // world.regions.push(regionToAdd);
-        // console.log(regions);
+    
+    world.regions.push(newRegion);
 
 
-        // for (let city of region.towns) {
-        //     for (let person of city.notable_people) {
-        //         if (person.name === personToAddExcitementTo.name) {
-        //             person.name += "!!!";
-        //         }
-        //     }
-        // }
-    }
 
     // Write it back to file
     await fs.writeFileSync("world.json", JSON.stringify(world, null, 2));
