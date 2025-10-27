@@ -8,26 +8,28 @@
 </head>
 
 <body>
-    <div id="worldDiv">
-        <p>Regions:</p>
-        <div id="regionDiv"></div>
-        <p>Towns:</p>
-        <div id="townDiv"></div>
-        <p>People:</p>
-        <div id="peopleDiv"></div>
+    <div class="bodyDiv">
+        <div id="worldDiv">
+            <p>Regions:</p>
+            <div id="regionDiv"></div>
+            <p>Towns:</p>
+            <div id="townDiv"></div>
+            <p>People:</p>
+            <div id="peopleDiv"></div>
+        </div>
+        <form id="nameForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <br>
+            <label for="townText">Town:</label>
+            <input type="text" name="townText">
+            <br>
+            <label for="peopleText">Person:</label>
+            <input type="text" name="peopleText">
+            <br>
+            <button type="submit">Add Region</button>
+        </form>
     </div>
-    <form id="nameForm">
-        <label for="name">Name:</label>
-        <input type="text" name="name">
-
-        <label for="townText">town:</label>
-        <input type="text" name="townText">
-
-        <label for="peopleText">Person:</label>
-        <input type="text" name="peopleText">
-
-        <button type="submit">Add Region</button>
-    </form>
 </body>
 
 </html>
