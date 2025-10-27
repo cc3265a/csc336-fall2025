@@ -3,5 +3,14 @@ html{
     color: white;
 }
 .bodyDiv{
-    margin: 70px;
+    margin: 100px;
+    border: solid;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.nameTitle{
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 5px;
 }
