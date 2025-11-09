@@ -18,15 +18,20 @@ function TodoItem({todo}) {
             {
                 // Ternary operator: condition ? valueIfTrue : valueIfFalse
                 // If todo.complete is true, show line-through, otherwise show none
-                // textDecoration: todo.complete ? "line-through" : "none",
-                color: (todo.type === "series") ? "blue" : "purple"
+                textDecoration: todo.complete ? "line-through" : "none",
+                // color: (todo.type === "series") ? "blue" : "purple",
+                textShadow: (todo.type === "series") ? "rgb(85, 138, 187, 0.5) 2px 2px" : "none"
             }
         }>
         {/* {todo.task} means "display the value of todo.task here" */}
         {todo.task}
     </li>
   )
+
 }
+
+
+
 
 // Export makes this component available for other files to import
 export default TodoItem
