@@ -24,6 +24,84 @@ function App() {
       type: "series",
       complete: false,
       id: 3
+    },
+    {
+      task: "Illuminae Files",
+      type: "series",
+      complete: false,
+      id: 4
+    },
+    {
+      task: "The Goblin Emperor",
+      type: "series",
+      complete: false,
+      id: 5
+    },
+    {
+      task: "Hitchhiker's Guide to the Galaxy",
+      type: "single",
+      complete: false,
+      id: 6
+    },
+    {
+      task: "Discworld",
+      type: "series",
+      complete: false,
+      id: 7
+    },
+    {
+      task: "Piranesi",
+      type: "single",
+      complete: false,
+      id: 8
+    },
+    {
+      task: "Manhunt",
+      type: "single",
+      complete: false,
+      id: 9
+    },
+    {
+      task: "Station Enternity Midsolar Murders",
+      type: "series",
+      complete: false,
+      id: 10
+    },
+    {
+      task: "How Nonviolence Protects the State",
+      type: "single",
+      complete: false,
+      id: 11
+    },
+    {
+      task: "The River has Teeth",
+      type: "single",
+      complete: false,
+      id: 12
+    },
+    {
+      task: "House of Hollow",
+      type: "single",
+      complete: false,
+      id: 13
+    },
+    {
+      task: "House of Leaves",
+      type: "single",
+      complete: true,
+      id: 14
+    },
+    {
+      task: "All Systems Red",
+      type: "single",
+      complete: true,
+      id: 15
+    },
+    {
+      task: "Witness for the Dead",
+      type: "single",
+      complete: true,
+      id: 16
     }
   ]);
 
@@ -71,7 +149,7 @@ function App() {
         
       </ul>
       
-      <label for="completed">Enter Completed Book Name</label>
+      <label for="completed">Enter Book to Change Completion Status</label>
       <br></br>
       <input 
         type="text"
