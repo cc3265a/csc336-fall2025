@@ -5,7 +5,7 @@
 }
 
 body{
-    /* background-color: rgb(240, 232, 223); */
+  /* background-color: rgb(240, 232, 223); */
 }
 
 button{
@@ -24,4 +24,5 @@ h1{
 
 html{
   background: url('./parchment.jpg');
+  background-color: blueviolet;
 }
