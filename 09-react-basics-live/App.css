@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(240, 232, 223);
+    /* background-color: rgb(240, 232, 223); */
 }
 
 button{
@@ -19,5 +19,9 @@ button{
 
 h1{
   font-size: 50px;
-  margin-left: -15%;
+  margin-left: -10%;
+}
+
+html{
+    background: url('../parchment.jpg');
 }
