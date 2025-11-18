@@ -22,7 +22,7 @@ ISSLoc
     );
    
 
-async function getAndDisplaySpace(){
+async function getAndDisplaySpace(){ 
     let spaceResponse = await fetch("https://api.nasa.gov/planetary/apod?api_key=QoTXK5ln5ElHpNtm0WhP0hIflqMX9Ub5YwnDj7hh&count=1&thumbs=True");
     let spaceData = await spaceResponse.json();
     let spaceImageHTML = document.createElement("img");
