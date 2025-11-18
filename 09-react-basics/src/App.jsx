@@ -1,3 +1,7 @@
+import {BrowserRouter, Routes, Route, NavLink} from "react-router-dom";
+import Home from './Home.jsx';
+import About from './About.jsx';
+
 import { useState } from 'react'
 import TodoItem from "./TodoItem"
 
@@ -118,6 +122,21 @@ function App() {
   }
   return (
     <div id='bodyDiv'>
+      <BrowserRouter>
+        <nav>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/pokemon">Pokemon</NavLink>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          {/* <Route path="/pokemon" element={<RandomPokemon/>}/> */}
+        </Routes>
+
+      </BrowserRouter>
+
       <h1>Book Tracker</h1>
       <label for="bookNameInp">Book Name </label>
       <br></br>
