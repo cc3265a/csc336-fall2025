@@ -1,4 +1,4 @@
-
+import dotenv from 'dotenv'
 import { MongoClient, ServerApiVersion } from "mongodb";
 const uri = "mongodb+srv://cc3265a_db_user:bkGUEVuCC2AX1EVZ@csc-336-fall2025.mdywr7v.mongodb.net/?appName=csc-336-fall2025";
 
