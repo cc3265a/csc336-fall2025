@@ -1,9 +1,9 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import { MongoClient, ServerApiVersion } from "mongodb";
-const uri = "mongodb+srv://cc3265a_db_user:bkGUEVuCC2AX1EVZ@csc-336-fall2025.mdywr7v.mongodb.net/?appName=csc-336-fall2025";
+// const uri = "mongodb+srv://cc3265a_db_user:bkGUEVuCC2AX1EVZ@csc-336-fall2025.mdywr7v.mongodb.net/?appName=csc-336-fall2025";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
+const client = new MongoClient(process.env.MONGO_URI, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
@@ -33,3 +33,10 @@ async function run() {
   }
 }
 run().catch(console.dir);
+
+
+// class 11/18
+// const client = new MongoClient(process.env.MONGO_URI)
+// i immediatly gave up because he doesnt sit still long enough to copy
+// I think this code is in db-demo.js in week 8 but tbh idk
+// damn prof just gave up
