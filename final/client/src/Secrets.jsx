@@ -1,19 +1,24 @@
-import {BrowserRouter, Routes, Route, NavLink} from "react-router-dom";
 import { useState } from 'react'
 
 // hey, I know this is the Least Secure way of doing passwords, but it uses react and there are zero consequences if someone breaks in so,,,
 
 function Secrets() {
-    const [isVerified, setIsVerified] = useState(false);
     const [userPass, setUserPass] = useState("");
 
     function checkPassword(){
         if (userPass === "secretPass"){
             console.log("yippee!");
-            setIsVerified(true);
             let secretDiv = document.getElementById("secretsRevealed");
             console.log(secretDiv);
             secretDiv.innerText = "Welcome to the world of secrets!";
+            secretDiv.innerHTML = secretDiv.innerHTML + `
+            <iframe
+                src="./secrets.html"
+                title="iframe Example 1"
+                width="400"
+                height="300">
+            </iframe>`
+            console.log("secrets here");
         }
         else{
             console.log("uh oh :( thats not the password :( no secrets for you :(");
@@ -30,6 +35,7 @@ function Secrets() {
         <br></br>
         <button onClick={checkPassword}>Enter</button>
         <div id="secretsRevealed"></div>
+        
     </div>
   )
 }

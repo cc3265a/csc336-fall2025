@@ -4,8 +4,6 @@ import { useState } from 'react'
 
 function Home() {
   
-  function addTodo() {
-  }
   return (
     <div id='bodyDiv'>
       <h1>My Website!</h1>

@@ -10,7 +10,7 @@ function App() {
   const [fromServer, setFromServer] = useState({something: 0});
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/data")
+    fetch("/api/data")
       .then(result => result.json())
       .then(data => setFromServer(data));
 
@@ -20,17 +20,28 @@ function App() {
   return (
     <>
       {fromServer.something }
-      <BrowserRouter>
-        <nav>
-            <NavLink to="/">Home |  </NavLink>
-            <NavLink to="/secrets">Secrets |  </NavLink>
-        </nav>
+        <BrowserRouter>
+          <nav id="routerCSS">
+              <NavLink to="/">Home |  </NavLink>
+              <NavLink to="/secrets" style={
+                ({ isActive }) =>
+                  isActive
+                    ? {
+                        color: '#000000ff',
+                        background: '#f0f0f0'
+                      }
+                    : { color: '#545e6f', background: '#c6c6c6ff' }
+              }>
+                Secrets |  
+                </NavLink>
+          </nav>
 
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/secrets" element={<Secrets/>}/>
-          </Routes>
-    </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/secrets" element={<Secrets/>}/>
+            </Routes>
+      </BrowserRouter>
+    <a href= "./secrets.html"></a>
   </>
   );
 }
