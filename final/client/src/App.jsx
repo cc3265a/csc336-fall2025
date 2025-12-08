@@ -41,7 +41,7 @@ function App() {
             <Route path="/secrets" element={<Secrets/>}/>
             </Routes>
       </BrowserRouter>
-    <a href= "./secrets.html"></a>
+    
   </>
   );
 }
