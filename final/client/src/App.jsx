@@ -3,7 +3,13 @@ import {BrowserRouter, Routes, Route, NavLink} from "react-router-dom";
 import Home from './Home.jsx';
 import Secrets from './Secrets.jsx';
 
+import * as fs from 'fs';
+import express from "express";
 
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.static("public"));
 
 function App() {
 
@@ -23,15 +29,7 @@ function App() {
         <BrowserRouter>
           <nav id="routerCSS">
               <NavLink to="/">Home |  </NavLink>
-              <NavLink to="/secrets" style={
-                ({ isActive }) =>
-                  isActive
-                    ? {
-                        color: '#000000ff',
-                        background: '#f0f0f0'
-                      }
-                    : { color: '#545e6f', background: '#c6c6c6ff' }
-              }>
+              <NavLink to="/secrets">
                 Secrets |  
                 </NavLink>
           </nav>

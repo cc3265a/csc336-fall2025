@@ -1,18 +1,23 @@
 import { useState } from 'react'
-import * as fs from 'fs';
 // import fs from 'fs';
 
 // hey, I know this is the Least Secure way of doing passwords, but it uses react and there are zero consequences if someone breaks in so,,,
 
-let fileContent = fs.readFileSync("../server/data.json", "utf8");
-let myParse = JSON.parse(fileContent);
+//client side read files is fetch, not FS, read file sync
 
-let jsonData = [];
+// let jsonData = [1,2,3];
 
-for (let j = 0; j < myParse.length; j++){
-    jsonData.push(myParse[j]);
+// for (let j = 0; j < myParse.length; j++){
+//     jsonData.push(myParse[j]);
+// }
+// console.log(jsonData);
+
+async function loadWorld() {
+    const res = await fetch("/world");
+    const data = await res.json();
+    console.log(data);
 }
-console.log(jsonData);
+
 
 
 function Secrets() {
@@ -99,3 +104,4 @@ function Secrets() {
   )
 }
 export default Secrets
+loadWorld()
